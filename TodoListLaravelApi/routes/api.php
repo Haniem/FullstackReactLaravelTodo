@@ -18,6 +18,7 @@ Route::post('/auth/logout', [AuthController::class, 'logout'])->middleware('auth
 Route::get('/users/getUserData', [UserController::class, 'getUserData']);
 Route::patch('/users/updateUserData', [UserController::class, 'updateUserData'])->middleware('auth:sanctum');
 Route::delete('/users/deleteUserData', [UserController::class, 'deleteUserData'])->middleware('auth:sanctum');
+Route::patch('/users/updateUserPassword', [UserController::class, 'updateUserPassword'])->middleware('auth:sanctum');
 
 Route::get('/types/getAllTypes', [TypeController::class], 'getAllTypes');
 Route::get('/types/getType', [TypeController::class], 'getType');
